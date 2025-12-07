@@ -12,6 +12,9 @@ public class JobsTest extends BaseTest {
     public QaPage qaPage;
     public ApplicationPage applicationPage;
 
+    private final String IstanbulLocation = "Istanbul, Turkiye";
+    private final String qaDepartment = "Quality Assurance";
+
     @Test
     public void filterJobs() throws InterruptedException {
         qaPage = new QaPage(driver);
@@ -20,9 +23,9 @@ public class JobsTest extends BaseTest {
         jobsPage = qaPage.clickSeeAllJobs();
         jobsPage.selectLocationFilter();
         Assert.assertTrue(jobsPage.anyJobExist());
-        jobsPage.getAllJobsTitles().forEach(title -> Assert.assertTrue(title.contains("Quality Assurance")));
-        jobsPage.getAllJobsDepartments().forEach(department -> Assert.assertTrue(department.contains("Quality Assurance")));
-        jobsPage.getAllJobsLocations().forEach(location -> Assert.assertTrue(location.contains("Istanbul, Turkiye")));
+        jobsPage.getAllJobsTitles().forEach(title -> Assert.assertTrue(title.contains(qaDepartment)));
+        jobsPage.getAllJobsDepartments().forEach(department -> Assert.assertTrue(department.contains(qaDepartment)));
+        jobsPage.getAllJobsLocations().forEach(location -> Assert.assertTrue(location.contains(IstanbulLocation)));
     }
 
     @Test(dependsOnMethods = "filterJobs", alwaysRun = true)
