@@ -57,7 +57,7 @@ public class JobsPage extends BasePage {
         waitForElementToClick(selectIstanbulTurkiye);
         selectIstanbulTurkiye.click();
         waitForTextToBePresent(filterByLocation, IstanbulLocation);
-        Thread.sleep(5000);
+        Thread.sleep(5000); // Waits until the job list is updated. I haven't found a stable and better method.
     }
 
     public boolean anyJobExist() {
@@ -101,3 +101,4 @@ public class JobsPage extends BasePage {
         return new ApplicationPage(driver);
     }
 }
+
