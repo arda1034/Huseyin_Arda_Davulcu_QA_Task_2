@@ -4,12 +4,12 @@ QA Engineer - Selenium Task 2
 
 ### Description
 
-It is a project created to perform automation tests requested through the Insider site.
+This is a project created to perform automation tests on the Insider website as requested.
 
 ### Features
 - **UI Automation**: All requirements were met in accordance with the POM structure using Selenium WebDriver.
 - **Configuration**: Developments outside the project requirements can be turned on or off via the configuration file.
-- **Screenshot**: At the end of each test, a screenshot was taken and the test result was written to the file name.
+- **Screenshot**: At the end of each test, a screenshot was taken and named after the test name and its result.
 
 ### Project Structure
 ```
@@ -40,7 +40,7 @@ Huseyin_Arda_Davulcu_QA_Task_2/
 
 ### System Requirements
 
-Tests were performed with the following versions.
+The tests were performed in accordance with the following versions.
 
 - **Java**: JDK 21
 - **Maven**: 3.9.11
